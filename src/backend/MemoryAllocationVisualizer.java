@@ -23,9 +23,6 @@ public class MemoryAllocationVisualizer {
         }
     }
     
-    
-    
-    
     static class Process {
         String name;
         int size;
