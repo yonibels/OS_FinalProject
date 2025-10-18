@@ -31,6 +31,11 @@ public class InputProcess extends javax.swing.JFrame {
         ProceedB = new javax.swing.JButton();
         ClearB = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        SizeEnter = new javax.swing.JTextField();
+        BlocksEnter = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        NumProcessEnter = new javax.swing.JTextField();
 
         jTextField4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -71,7 +76,7 @@ public class InputProcess extends javax.swing.JFrame {
                 .addGroup(InputProcessLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ClearB, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ProceedB, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(188, Short.MAX_VALUE))
         );
         InputProcessLayout.setVerticalGroup(
             InputProcessLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -83,15 +88,54 @@ public class InputProcess extends javax.swing.JFrame {
                 .addContainerGap(65, Short.MAX_VALUE))
         );
 
+        jPanel2.setBackground(new java.awt.Color(255, 153, 153));
+
+        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jTextField1.setText("Input Memory");
+
+        SizeEnter.setText("Enter Size: ");
+
+        BlocksEnter.setText("Enter Number of Blocks: ");
+
+        jTextField6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jTextField6.setText("Input Process");
+
+        NumProcessEnter.setText("Enter Number of Process:");
+        NumProcessEnter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumProcessEnterActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 504, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(SizeEnter, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                        .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(BlocksEnter)
+                    .addComponent(NumProcessEnter, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 193, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(SizeEnter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(BlocksEnter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(NumProcessEnter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -99,11 +143,11 @@ public class InputProcess extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(145, Short.MAX_VALUE)
+                .addContainerGap(131, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(InputProcess, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,13 +156,25 @@ public class InputProcess extends javax.swing.JFrame {
                 .addComponent(InputProcess, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(257, Short.MAX_VALUE))
+                .addContainerGap(204, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void ProceedBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProceedBActionPerformed
+    memory.clear();
+    processes.clear();
+    
+    memory blocks
+    int numMemory;
+    try {
+        numMemory = Integer.parseInt(memoryCountTextField.getText().trim());
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Invalid number of memory blocks");
+        return;
+    }
+
         // TODO add your handling code here:
     }//GEN-LAST:event_ProceedBActionPerformed
 
@@ -129,6 +185,10 @@ public class InputProcess extends javax.swing.JFrame {
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void NumProcessEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumProcessEnterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumProcessEnterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,10 +226,15 @@ public class InputProcess extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField BlocksEnter;
     private javax.swing.JButton ClearB;
     private javax.swing.JPanel InputProcess;
+    private javax.swing.JTextField NumProcessEnter;
     private javax.swing.JButton ProceedB;
+    private javax.swing.JTextField SizeEnter;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }
