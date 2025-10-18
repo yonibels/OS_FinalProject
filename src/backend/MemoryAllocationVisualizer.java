@@ -304,7 +304,7 @@ public class MemoryAllocationVisualizer {
         System.out.println("Compaction completed. All free spaces merged at the end.");
         printMemoryListTable();
     }
-
+    
     // output table
     static void printMemoryListTable() {
         System.out.println("\nMemory List:");
